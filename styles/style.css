@@ -1,0 +1,273 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Poppins";
+  src: url("./Roboto/Roboto-Black.ttf"), format("TrueType");
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+html, body {
+  transition: all 0.5s ease !important;
+}
+
+html {
+  font-size: 62.2%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --bg-color: rgb(17, 17, 17);
+  --text-color: rgb(226, 226, 226);
+  --main-color: rgb(133, 9, 9);
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 9%;
+  background-color: var(--bg-color);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+}
+.navbar a {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 2.5rem;
+  transition: all 0.3s;
+}
+.navbar a:hover {
+  color: var(--main-color);
+}
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  display: none;
+}
+
+/* Home design */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 8rem 7% 2rem 5rem;
+  background-color: black;
+}
+section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+section h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+section p {
+  font-size: 1.6rem;
+}
+section span {
+  color: var(--main-color);
+}
+section .btn {
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 2rem;
+  border-radius: 4rem;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  letter-spacing: 2px;
+  box-shadow: 0 0 0.7rem var(--main-color);
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+section .btn:hover {
+  box-shadow: 0 0 1.7rem var(--main-color);
+}
+
+section.home .home-img {
+  padding-left: 10rem;
+}
+section.home .home-img img {
+  height: auto;
+  width: 30vw;
+}
+section.home .home-content h3:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+section.home .social-media {
+  margin: 3rem 0;
+}
+section.home .social-media a {
+  color: var(--main-color);
+  font-size: 19px;
+  margin-right: 12px;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  border: 3px solid var(--main-color);
+  transition: all 0.4s;
+}
+section.home .social-media a:hover {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 0 2rem var(--main-color);
+}
+
+section.about {
+  gap: 6rem;
+  padding: 3rem 3rem;
+}
+section.about img {
+  width: 30rem;
+  height: auto;
+  border-radius: 11rem 4rem 11rem 4rem;
+}
+section.about .about-content h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+section.about .about-content p {
+  font-size: 1.6rem;
+  margin: 1.5rem 0;
+}
+
+section.services {
+  display: block;
+}
+section.services h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+section.services .services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+section.services .services-container .service-box {
+  /*La propriété flex est une propriété raccourcie qui définit la capacité 
+  d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.
+  */
+  flex: 1 1 30rem;
+  border: 1px solid var(--bg-color);
+  padding: 10px 30px;
+  border-radius: 4rem;
+  background-color: var(--bg-color);
+  text-align: center;
+  transition: all 0.4s;
+}
+section.services .services-container .service-box:hover {
+  border-color: var(--main-color);
+}
+section.services .services-container .service-box i {
+  font-size: 5rem;
+  color: var(--main-color);
+}
+section.services .services-container .service-box h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+section.services .services-container .service-box p {
+  margin: 15px 0;
+}
+section.services .services-container .btn {
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+section.projects {
+  display: block;
+  background-color: var(--bg-color);
+}
+section.projects h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+section.projects img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+}
+section.projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+section.projects .project-box {
+  height: 21rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem black;
+}
+section.projects .project-box:hover img {
+  transform: scale(1.1);
+}
+section.projects .project-box:hover .project-layer {
+  transform: translateY(0);
+}
+section.projects .project-box .link {
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 20px;
+}
+section.projects .project-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.818), rgba(133, 9, 9, 0.813));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 5px;
+  gap: 10px;
+  transform: translateY(100%);
+  transition: all 0.4s;
+}
+
+/*# sourceMappingURL=style.css.map */
