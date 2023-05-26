@@ -12,10 +12,6 @@
   outline: none;
 }
 
-html, body {
-  transition: all 0.5s ease !important;
-}
-
 html {
   font-size: 62.2%;
   overflow-x: hidden;
@@ -36,10 +32,15 @@ a {
   --main-color: rgb(133, 9, 9);
 }
 
+header.sticky {
+  box-shadow: 0px -11px 3rem white;
+}
+
 #header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -56,6 +57,7 @@ a {
 
 .navbar {
   display: flex;
+  position: relative;
 }
 .navbar a {
   font-size: 20px;
@@ -71,9 +73,25 @@ a {
 }
 
 #menu-icon {
+  display: none;
   font-size: 2.5rem;
   color: var(--text-color);
+}
+#menu-icon:hover {
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+#xmark {
   display: none;
+  font-size: 25px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+#xmark:hover {
+  cursor: pointer;
+  color: var(--main-color);
 }
 
 /* Home design */
@@ -89,6 +107,11 @@ section h1 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.3;
+}
+section h2.heading {
+  text-align: center;
+  font-size: 4rem;
+  margin: 4rem;
 }
 section h3 {
   font-size: 2.5rem;
@@ -107,7 +130,6 @@ section .btn {
   border-radius: 4rem;
   background-color: var(--main-color);
   color: var(--text-color);
-  letter-spacing: 2px;
   box-shadow: 0 0 0.7rem var(--main-color);
   font-weight: 600;
   transition: all 0.4s ease;
@@ -122,6 +144,7 @@ section.home .home-img {
 section.home .home-img img {
   height: auto;
   width: 30vw;
+  animation: floatImg 4s ease-in-out infinite;
 }
 section.home .home-content h3:nth-of-type(2) {
   margin-bottom: 20px;
@@ -149,6 +172,7 @@ section.home .social-media a:hover {
 section.about {
   gap: 6rem;
   padding: 3rem 3rem;
+  background-color: var(--bg-color);
 }
 section.about img {
   width: 30rem;
@@ -167,11 +191,6 @@ section.about .about-content p {
 
 section.services {
   display: block;
-}
-section.services h2 {
-  text-align: center;
-  font-size: 4rem;
-  margin-bottom: 4rem;
 }
 section.services .services-container {
   display: flex;
@@ -213,12 +232,6 @@ section.services .services-container .btn {
 
 section.projects {
   display: block;
-  background-color: var(--bg-color);
-}
-section.projects h2 {
-  text-align: center;
-  font-size: 4rem;
-  margin-bottom: 4rem;
 }
 section.projects img {
   height: 100%;
@@ -268,6 +281,192 @@ section.projects .project-layer {
   gap: 10px;
   transform: translateY(100%);
   transition: all 0.4s;
+}
+
+section.contact {
+  display: block;
+  background-color: var(--bg-color);
+}
+section.contact h2 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+section.contact .contact-container {
+  margin-top: 14rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.contact .contact-container a {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+section.contact .contact-container a:hover > i {
+  transform: scale(1.2);
+}
+section.contact .contact-container .email {
+  margin: 20px 0;
+}
+section.contact .contact-container p, section.contact .contact-container i {
+  font-size: 19px;
+  transition: all 0.4s ease;
+}
+section.contact .contact-container p {
+  margin-right: 10px;
+}
+
+/* Design footer */
+footer {
+  position: relative;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+footer a {
+  font-size: 18px;
+  position: absolute;
+  right: 3rem;
+  bottom: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  box-shadow: 0 0 0.5rem var(--main-color);
+  transition: all 0.2s ease;
+}
+footer a:hover {
+  box-shadow: 0 0 1.5rem var(--main-color);
+}
+
+.footer-content {
+  width: 80%;
+}
+.footer-content p {
+  font-size: 17px;
+  text-align: center;
+}
+
+@keyframes floatImg {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 917px) {
+  section {
+    padding: 2rem 9%;
+  }
+  #header {
+    padding: 0 4%;
+  }
+}
+@media screen and (max-width: 793px) {
+  html {
+    font-size: 53%;
+  }
+  #menu-icon {
+    display: block;
+  }
+  #header {
+    padding: 2rem 4%;
+  }
+  #header a {
+    text-align: start;
+  }
+  #header .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100vh;
+    padding: 1rem 3%;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(30rem);
+    transition: all 0.4s;
+  }
+  #header .navbar.active {
+    transform: translateX(0);
+  }
+  #header #xmark {
+    display: block;
+  }
+  section.home {
+    flex-direction: column-reverse;
+    padding-top: 10rem;
+  }
+  section.home .home-img img {
+    width: 50vw;
+  }
+  section h2.heading {
+    margin: 8rem;
+  }
+  section.about {
+    flex-direction: column;
+  }
+  section.about .about-img img {
+    width: 50vw;
+  }
+  section.projects .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section.projects .project-img {
+    margin: 0 auto;
+  }
+  section.projects .project-box .project-layer {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 550px) {
+  section.home {
+    padding-top: 4rem;
+  }
+  section.home .home-img {
+    padding: 10px;
+  }
+  section.home .home-img img {
+    width: 90vw;
+  }
+  section.about .about-img {
+    padding: 10px;
+  }
+  section.about .about-img img {
+    width: 90vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 12rem;
+  }
+  footer a {
+    position: initial;
+  }
+  .footer-content p {
+    font-size: 19px;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
