@@ -11,6 +11,38 @@
         html{
             scroll-behavior: smooth !important;
         }
+
+        /* google css */
+        .goog-logo-link{
+            display:none !important;
+        }
+        .goog-te-gadget{
+            color:transparent!important;
+        }
+        /* hidde google translate btn animation */
+        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf{
+            display: none !important;
+        }
+        /* select css */
+        #google_translate_element select{
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px 5px;
+            color: white;
+        }
+        #google_translate_element select option{
+            color: white;
+            background-color: black;
+        }
+        #google_translate_element{
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .goog-te-gadget span{
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -22,35 +54,41 @@
         <nav class="navbar">
             <i class="fa-regular fa-circle-xmark" id="xmark"></i>
             <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
+            <a href="#about">A propos</a>
             <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Projets</a>
             <a href="#contact">Contact</a>
             <!-- <a href="mailto:mamadoualiou@gmail.com">Contacts</a> -->
+            <div id="google_translate_element"></div>
         </nav>
     </header>
 
     <section class="home" id="home">
         <div class="home-content">
-            <h3>Hello It's me</h3>
+            <h3>Hello C'est moi</h3>
             <h1>M. Aliou Diallo</h1>
-            <h3>I'm a <span class="text-animate"></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, quo? Excepturi itaque aliquam sint pariatur ratione soluta!</p>
+            <h3>Je suis <span class="text-animate"></span></h3>
+            <p>Le développement informatique est passionnant : Tant de choses sont possibles que 
+                j'ai tendance à dire que tout est possible. C'est toujours un plaisir pour moi d'aborder de 
+                nouvelles technologies, techniques 
+                et mon parcours personnel
+                m'a permis et continue à me permettre de poursuivre dans ce domaine.
+            </p>
             <div class="social-media">
-                <a href="">
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="">
+                <a href="https://github.com/aliou77">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="">
+                <a href="#">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <a href="#" class="btn">Download CV</a>
+            <a href="./imgs/about.jpg" class="btn">Telecharger CV</a>
         </div>
         <div class="home-img">
             <img src="./imgs/profile.png" alt="Mamadou Aliou Diallo">
@@ -62,20 +100,18 @@
             <img src="./imgs/about.jpg" alt="">
         </div>
         <div class="about-content">
-            <h2>About <span>me</span></h2>
+            <h2>A propos de <span>moi</span></h2>
             <h3>Developer Full-Stack</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni error 
-                laboriosam in cum neque saepe consectetur, accusantium assumenda cumque et.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint, praesentium!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis exercitationem 
-                vero illum fuga sunt eum nesciunt animi, mollitia asperiores non!
+            <p>Autodidacte depuis 5 ans dans le développement de projets web, en particulier la 
+                conception de sites web et d'applications. Autonome, mais appréciant le travail en équipe avec des collaborateurs sur site ou distants.
+                Passionner par les nouvelles technologies web, je suis en quête de nouveaux défis à surmonter.
             </p>
-            <a href="#" class="btn">Read more</a>
+            <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Read more</a>
         </div>
     </section>  
 
     <section class="services" id="services">
-        <h2 class="heading">Our <span>Services</span></h2>
+        <h2 class="heading">Nos <span>Services</span></h2>
 
         <div class="services-container">
             <div class="service-box">
@@ -84,7 +120,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, nihil 
                     expedita qui similique autem molestiae ducimus assumenda cupiditate aliquam error!
                 </p>
-                <a href="#" class="btn">Read more</a>
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Read more</a>
             </div>
             
             <div class="service-box">
@@ -93,22 +129,22 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, nihil 
                     expedita qui similique autem molestiae ducimus assumenda cupiditate aliquam error!
                 </p>
-                <a href="#" class="btn">Read more</a>
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Read more</a>
             </div>
 
             <div class="service-box">
                 <i class="fa-solid fa-palette"></i>
-                <h3>Graphic Designer</h3>
+                <h3>Web Designer</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, nihil 
                     expedita qui similique autem molestiae ducimus assumenda cupiditate aliquam error!
                 </p>
-                <a href="#" class="btn">Read more</a>
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Read more</a>
             </div>
         </div>
     </section>
 
     <section class="projects" id="projects">
-        <h2 class="heading">Latest <span>Projects</span></h2>
+        <h2 class="heading">Derniers <span>Projets</span></h2>
 
         <div class="projects-container">
             <div class="project-box">
@@ -116,11 +152,10 @@
                     <img src="./imgs/projects/chaap.png" alt="Chat application">
                 </div>
                 <div class="project-layer">
-                    <h3>Full-Stack Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita at alias blanditiis quae pariatur 
-                        temporibus!
+                    <h3>Projet Full-Stack</h3>
+                    <p> Voici une application de chat instantanée realiser avec le Framwork Symfony.
                     </p>
-                    <a href="#" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/aliou77/Projet-Symfony-Chat-Application" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -129,11 +164,11 @@
                     <img src="./imgs/projects/peintre.png" alt="Chat application">
                 </div>
                 <div class="project-layer">
-                    <h3>Full-Stack Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita at alias blanditiis quae pariatur 
-                        temporibus!
+                    <h3>Projet Full-Stack</h3>
+                    <p>Je vous presente un site realiser avec le Framework Symfony pour un Peintre, avec une
+                        administration dans le Back Office.
                     </p>
-                    <a href="#" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/aliou77/Projet-symfony-peintre" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
@@ -142,22 +177,21 @@
                     <img src="./imgs/projects/chaap.png" alt="Chat application">
                 </div>
                 <div class="project-layer">
-                    <h3>Full-Stack Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo expedita at alias blanditiis quae pariatur 
-                        temporibus!
+                    <h3>Projet Front-End</h3>
+                    <p> Creation d'un Templete pour l'application de chat instantanée
                     </p>
-                    <a href="#" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/aliou77/My-Templetes/tree/main/Chat%20App" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me !</span></h2>
+        <h2 class="heading">Me <span>Contacter !</span></h2>
         <div class="contact-container">
             <p class="email">mamadoualioudevelopperweb@gmail.com</p>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mamadoualioudevelopperweb@gmail.com" target="_blank" class="btn">
-                <p>Send Me An Email</p>
+                <p>M'envoyer un Email</p>
                 <i class="fa-regular fa-envelope"></i>
             </a>
         </div>
@@ -177,5 +211,26 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- tiped js -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- google translate -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script defer>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'}, 
+                'google_translate_element',
+            );
+        }
+
+        setInterval(()=>{
+            if($(document.body).css('top') == '40px'){
+                $('#header').css('margin-top', '5rem')
+                $('section#home').css('margin-top', '6rem')
+            }else{
+                $('section#home').css('margin-top', '0')
+                $('#header').css('margin-top', '0')
+            }
+        }, 1000)
+
+    </script>
 </body>
 </html>
