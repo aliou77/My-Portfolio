@@ -62,7 +62,7 @@ $(document).ready(()=>{
     // typed.js for animation text
     //Full-Stack Developer
     const typed =  new Typed('.text-animate', {
-        strings: ['Developpeur Full-Stack', 'Developpeur Front-End', 'Developpeur Back-End', 'Designer Web'],
+        strings: ['Développeur Full-Stack', 'Développeur Front-End', 'Développeur Back-End', 'Designer Web'],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,

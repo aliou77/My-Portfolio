@@ -168,6 +168,9 @@ section.home .social-media a:hover {
   color: var(--text-color);
   box-shadow: 0 0 2rem var(--main-color);
 }
+section.home .btn {
+  margin-right: 5px;
+}
 
 section.about {
   gap: 6rem;
@@ -293,7 +296,7 @@ section.contact h2 {
   margin-bottom: 4rem;
 }
 section.contact .contact-container {
-  margin-top: 14rem;
+  margin-top: 18rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,7 +306,6 @@ section.contact .contact-container a {
   font-size: 18px;
   display: flex;
   align-items: center;
-  width: auto;
 }
 section.contact .contact-container a:hover > i {
   transform: scale(1.2);
