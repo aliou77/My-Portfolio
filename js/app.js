@@ -3,36 +3,38 @@ $(document).ready(()=>{
     const sections = $("section"),
           navLinks = $("nav a");
 
-    $(window).on('scroll', ()=>{
-        sections.each((i, sec)=>{
-            let top = window.scrollY
-            let offset = sec.offsetTop - 200
-            let height = sec.offsetHeight
-            let id = $(sec).attr('id')
-
-            if(top >= offset && top < offset + height){
-                navLinks.each((i, link)=>{
-                    $(link).removeClass('active')
-                    $('nav a[href="#'+ id +'"]').addClass('active')
-                })
-                // console.log("top: "+top, "offset: "+offset, "height: "+height)
+    function scrollSection(){
+        $(window).on('scroll', ()=>{
+            sections.each((i, sec)=>{
+                let top = window.scrollY
+                let offset = sec.offsetTop - 200
+                let height = sec.offsetHeight
+                let id = $(sec).attr('id')
+    
+                if(top >= offset && top < offset + height){
+                    navLinks.each((i, link)=>{
+                        $(link).removeClass('active')
+                        $('nav a[href="#'+ id +'"]').addClass('active')
+                    })
+                    // console.log("top: "+top, "offset: "+offset, "height: "+height)
+                }
+    
+                
+            })
+            // navbar sticky
+    
+            if(window.scrollY > 100){
+                $('header').addClass('sticky')
+            }else{
+                $('header').removeClass('sticky')
             }
-
-            
+    
+            // remove active when user click on link (scroll event)
+            if($('nav.navbar').hasClass('active')){
+                $('nav.navbar').removeClass('active')
+            }
         })
-        // navbar sticky
-
-        if(window.scrollY > 100){
-            $('header').addClass('sticky')
-        }else{
-            $('header').removeClass('sticky')
-        }
-
-        // remove active when user click on link (scroll event)
-        if($('nav.navbar').hasClass('active')){
-            $('nav.navbar').removeClass('active')
-        }
-    })
+    }
     // console.log(sections, navLinks)
     
     // navbar show hide
@@ -62,10 +64,36 @@ $(document).ready(()=>{
     // typed.js for animation text
     //Full-Stack Developer
     const typed =  new Typed('.text-animate', {
-        strings: ['Développeur Full-Stack', 'Développeur Front-End', 'Développeur Back-End', 'Designer Web'],
+        strings: ['Développeur Full-Stack', 'Développeur PHP', 'Développeur web'],
         typeSpeed: 100,
         backSpeed: 100,
         backDelay: 1000,
         loop: true
     });
 })
+
+
+/*
+<!-- google translate -->
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script defer>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'fr'}, 
+                'google_translate_element',
+            );
+        }
+
+        setInterval(()=>{
+            if($(document.body).css('top') == '40px'){
+                $('#header').css('margin-top', '5rem')
+                $('section#home').css('margin-top', '6rem')
+            }else{
+                $('section#home').css('margin-top', '0')
+                $('#header').css('margin-top', '0')
+            }
+        }, 1000)
+
+    </script>
+
+*/ 

@@ -6,139 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <title>Mon Portfolio</title>
-    <style>
-        html{
-            scroll-behavior: smooth !important;
-        }
-
-        /* google css */
-        .goog-logo-link{
-            display:none !important;
-        }
-        .goog-te-gadget{
-            color:transparent!important;
-        }
-        /* hidde google translate btn animation */
-        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf{
-            display: none !important;
-        }
-        /* select css */
-        #google_translate_element select{
-            background-color: transparent;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding: 10px 5px;
-            color: white;
-        }
-        #google_translate_element select option{
-            color: white;
-            background-color: black;
-        }
-        #google_translate_element{
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .goog-te-gadget span{
-            display: none !important;
-        }
-    </style>
+    <title>Mamamdou Aliou Diallo | Portfolio</title>
 </head>
 <body>
     
     <!-- header design -->
     <header id="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="/" class="logo font-playball">M.A.D</a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
-        <nav class="navbar">
+        <nav class="navbar capitalize">
             <i class="fa-regular fa-circle-xmark" id="xmark"></i>
             <a href="#home" class="active">Home</a>
             <a href="#about">À propos</a>
             <a href="#services">Services</a>
             <a href="#projects">Projets</a>
+            <a href="./pages/mes-realisations.html">réalisations</a>
             <a href="#contact">Contact</a>
             <!-- <a href="mailto:mamadoualiou@gmail.com">Contacts</a> -->
-            <div id="google_translate_element"></div>
+            <!-- <div id="google_translate_element"></div> -->
         </nav>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello C'est moi</h3>
-            <h1>M. Aliou Diallo</h1>
-            <h3>Je suis <span class="text-animate"></span></h3>
-            <p>Le développement informatique est passionnant : Tant de choses sont possibles que 
-                j'ai tendance à dire que tout est possible. C'est toujours un plaisir pour moi d'aborder de 
-                nouvelles technologies, techniques 
-                et mon parcours personnel
-                m'a permis et continue à me permettre de poursuivre dans ce domaine.
-            </p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/aliou77">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+    <section class="home shadow-home" id="home">
+        <div class="content flex">
+            <div class="home-content">
+                <h3 class="font-medium text-main-color">Bonjour, je suis</h3>
+                <h1 class="h1 font-playfair">Mamadou Aliou Diallo</h1>
+                <h3 class="mt-3"><span class="text-animate"></span></h3>
+                <p>Le développement informatique est passionnant : Tant de choses sont possibles que 
+                    j'ai tendance à dire que tout est possible. C'est toujours un plaisir pour moi d'aborder de 
+                    nouvelles technologies, techniques 
+                    et mon parcours personnel
+                    m'a permis et continue à me permettre de poursuivre dans ce domaine.
+                </p>
+                <div class="cv-content">
+                    <a href="./cv/CV French - NEW.pdf" class="btn" download="CV - M. Aliou Diallo">Telecharger CV Français</a>
+                    <a href="./cv/CV English - NEW.pdf" class="btn" download="CV - M. Aliou Diallo">Telecharger CV Anglais</a>
+                </div>
             </div>
-            <a href="./cv/CV French - NEW.pdf" class="btn" download="CV - M. Aliou Diallo">Telecharger CV Français</a>
-            <a href="./cv/CV English - NEW.pdf" class="btn" download="CV - M. Aliou Diallo">Telecharger CV Anglais</a>
-        </div>
-        <div class="home-img">
-            <img src="./imgs/profile.png" alt="Mamadou Aliou Diallo">
+            <div class="home-img">
+                <img src="./imgs/profile.png" alt="Mamadou Aliou Diallo">
+            </div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="./imgs/about.jpg" alt="">
-        </div>
-        <div class="about-content">
-            <h2>À propos de <span>moi</span></h2>
-            <h3>Developer Full-Stack</h3>
-            <p>Autodidacte depuis 5 ans dans le développement de projets web, en particulier la 
-                conception de sites web et d'applications. Autonome, mais appréciant le travail en équipe avec des collaborateurs sur site ou distants.
-                Passionner par les nouvelles technologies web, je suis en quête de nouveaux défis à surmonter.
-            </p>
-            <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Voir plus</a>
+        <div class="content flex gap-6">
+            <div class="about-img">
+                <img src="./imgs/about.jpg" alt="">
+            </div>
+            <div class="about-content">
+                <h2 class="font-playfair">À propos de <span class="font-playfair">moi</span></h2>
+                <p>Autodidacte depuis 5 ans dans le développement de projets web, en particulier la 
+                    conception de sites web et d'applications. Autonome, mais appréciant le travail en équipe avec des collaborateurs sur site ou distants.
+                    Passionner par les nouvelles technologies web, je suis en quête de nouveaux défis à surmonter.
+                </p>
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" class="btn">Voir plus</a>
+            </div>
         </div>
     </section>  
 
     <section class="services" id="services">
-        <h2 class="heading">Nos <span>Services</span></h2>
+        <div class="content">
+            <h2 class="heading font-playfair">Nos <span class="font-playfair">Services</span></h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Développeur Front-End</h3>
+                    <p>Réalisation de sites vitrines responsives. Avec les technologies HTML & CSS, JavaScript, jQuery
+                        et le Framework <span class="text-main-color">React.</span>
+                    </p>
+                    <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" class="btn">Voir plus</a>
+                </div>
+                
+                <div class="service-box">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Développeur Back-End</h3>
+                    <p> Mise en place du fonctionnement et de la sécurité du site.
+                        Avec les technologies PHP, MySQL, SQLite
+                        et le Framework <span class="text-main-color">Symfony.</span>
+                    </p>
+                    <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" class="btn">Voir plus</a>
+                </div>
 
-        <div class="services-container">
-            <div class="service-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Développeur Front-End</h3>
-                <p>Réalisation de sites vitrines responsives. Avec les technologies HTML & CSS, JavaScript, jQuery.
-                </p>
-                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Voir plus</a>
-            </div>
-            
-            <div class="service-box">
-                <i class="fa-solid fa-code"></i>
-                <h3>Développeur Back-End</h3>
-                <p> Mise en place du fonctionnement et de la sécurité du site.
-                    Avec les technologies PHP, MySQL, SQLite.
-                </p>
-                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Voir plus</a>
-            </div>
-
-            <div class="service-box">
-                <i class="fa-solid fa-palette"></i>
-                <h3>Web Designer</h3>
-                <p>Design de contenu web pour une navigation utilisateur plus agréable. Avec l'utilisation 
-                    de librairies tierces.
-                </p>
-                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-1071b7233/" class="btn">Voir plus</a>
+                <div class="service-box">
+                    <i class="fa-solid fa-palette"></i>
+                    <h3>Développeur web</h3>
+                    <p>Conception et integration de sites <span class="text-main-color">Shopify et PrestaShop</span>
+                         avec des themes personaliser a la demande du client. Avec optimisation SEO pour les moteurs de recherches.
+                    </p>
+                    <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" class="btn">Voir plus</a>
+                </div>
             </div>
         </div>
     </section>
@@ -188,12 +146,29 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Me <span>Contacter !</span></h2>
+        <p></p>
         <div class="contact-container">
             <p class="email">mamadoualioudevelopperweb@gmail.com</p>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mamadoualioudevelopperweb@gmail.com" target="_blank" class="btn">
                 <p>M'envoyer un Email</p>
                 <i class="fa-regular fa-envelope"></i>
             </a>
+            <a href="wa.me/" target="_blank" class="btn">
+                <p>Mon whatsapp</p>
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <a href="wa.me/" target="_blank" class="btn">
+                <p>linkedIn</p>
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/aliou77">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -211,26 +186,5 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- tiped js -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- google translate -->
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script defer>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                {pageLanguage: 'fr'}, 
-                'google_translate_element',
-            );
-        }
-
-        setInterval(()=>{
-            if($(document.body).css('top') == '40px'){
-                $('#header').css('margin-top', '5rem')
-                $('section#home').css('margin-top', '6rem')
-            }else{
-                $('section#home').css('margin-top', '0')
-                $('#header').css('margin-top', '0')
-            }
-        }, 1000)
-
-    </script>
 </body>
 </html>
