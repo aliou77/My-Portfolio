@@ -20,7 +20,6 @@
             <a href="#about">À propos</a>
             <a href="#services">Services</a>
             <a href="#projects">Projets</a>
-            <a href="./pages/mes-realisations.html">réalisations</a>
             <a href="#contact">Contact</a>
             <!-- <a href="mailto:mamadoualiou@gmail.com">Contacts</a> -->
             <!-- <div id="google_translate_element"></div> -->
@@ -50,7 +49,7 @@
         </div>
     </section>
 
-    <section class="about" id="about">
+    <section class="about shadow-black" id="about">
         <div class="content flex gap-6">
             <div class="about-img">
                 <img src="./imgs/about.jpg" alt="">
@@ -66,13 +65,13 @@
         </div>
     </section>  
 
-    <section class="services" id="services">
+    <section class="services shadow-blue" id="services">
         <div class="content">
             <h2 class="heading font-playfair">Nos <span class="font-playfair">Services</span></h2>
             <div class="services-container">
                 <div class="service-box">
                     <i class="fa-solid fa-code"></i>
-                    <h3>Développeur Front-End</h3>
+                    <h3>Front-End <span class="text-main-color">React</span></h3>
                     <p>Réalisation de sites vitrines responsives. Avec les technologies HTML & CSS, JavaScript, jQuery
                         et le Framework <span class="text-main-color">React.</span>
                     </p>
@@ -81,7 +80,7 @@
                 
                 <div class="service-box">
                     <i class="fa-solid fa-code"></i>
-                    <h3>Développeur Back-End</h3>
+                    <h3>Back-End <span class="text-main-color">Symfony || NodeJS</span></h3>
                     <p> Mise en place du fonctionnement et de la sécurité du site.
                         Avec les technologies PHP, MySQL, SQLite
                         et le Framework <span class="text-main-color">Symfony.</span>
@@ -90,10 +89,10 @@
                 </div>
 
                 <div class="service-box">
-                    <i class="fa-solid fa-palette"></i>
-                    <h3>Développeur web</h3>
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Themes E-commerce</h3>
                     <p>Conception et integration de sites <span class="text-main-color">Shopify et PrestaShop</span>
-                         avec des themes personaliser a la demande du client. Avec optimisation SEO pour les moteurs de recherches.
+                        Avec optimisation SEO pour les moteurs de recherches.
                     </p>
                     <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" class="btn">Voir plus</a>
                 </div>
@@ -101,73 +100,76 @@
         </div>
     </section>
 
-    <section class="projects" id="projects">
-        <h2 class="heading">Derniers <span>Projets</span></h2>
-
-        <div class="projects-container">
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="./imgs/projects/chaap.png" alt="Chat application">
+    <section class="projects shadow-black" id="projects">
+        <div class="content">
+            <h2 class="heading">Derniers <span>Projets</span></h2>
+            <div class="projects-container">
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="./imgs/projects/chaap.png" alt="Chat application">
+                    </div>
+                    <div class="project-layer">
+                        <h3>Projet Full-Stack</h3>
+                        <p> Voici une application de chat instantanée realiser avec le Framwork Symfony.
+                        </p>
+                        <a href="./pages/mes-realisations.html" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
-                <div class="project-layer">
-                    <h3>Projet Full-Stack</h3>
-                    <p> Voici une application de chat instantanée realiser avec le Framwork Symfony.
-                    </p>
-                    <a href="https://github.com/aliou77/Projet-Symfony-Chat-Application" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="./imgs/projects/peintre.png" alt="Chat application">
+                    </div>
+                    <div class="project-layer">
+                        <h3>Projet Full-Stack</h3>
+                        <p>Je vous presente un site realiser avec le Framework Symfony pour un Peintre, avec une
+                            administration dans le Back Office.
+                        </p>
+                        <a href="./pages/mes-realisations.html" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <div class="project-img">
+                        <img src="./imgs/projects/front.png" alt="Chat application">
+                    </div>
+                    <div class="project-layer">
+                        <h3>Projet Front-End</h3>
+                        <p> Creation d'un Templete pour l'application de chat instantanée
+                        </p>
+                        <a href="./pages/mes-realisations.html" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="./imgs/projects/peintre.png" alt="Chat application">
-                </div>
-                <div class="project-layer">
-                    <h3>Projet Full-Stack</h3>
-                    <p>Je vous presente un site realiser avec le Framework Symfony pour un Peintre, avec une
-                        administration dans le Back Office.
-                    </p>
-                    <a href="https://github.com/aliou77/Projet-symfony-peintre" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-
-            <div class="project-box">
-                <div class="project-img">
-                    <img src="./imgs/projects/front.png" alt="Chat application">
-                </div>
-                <div class="project-layer">
-                    <h3>Projet Front-End</h3>
-                    <p> Creation d'un Templete pour l'application de chat instantanée
-                    </p>
-                    <a href="https://github.com/aliou77/My-Templetes/tree/main/Chat%20App" class="link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
+            <p class="flex justify-center mt-7">
+                <a href="./pages/mes-realisations.html" class="btn">Voir tous les projets</a>
+            </p>
         </div>
     </section>
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Me <span>Contacter !</span></h2>
-        <p></p>
-        <div class="contact-container">
-            <p class="email">mamadoualioudevelopperweb@gmail.com</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mamadoualioudevelopperweb@gmail.com" target="_blank" class="btn">
-                <p>M'envoyer un Email</p>
-                <i class="fa-regular fa-envelope"></i>
-            </a>
-            <a href="wa.me/" target="_blank" class="btn">
-                <p>Mon whatsapp</p>
-                <i class="fa-regular fa-envelope"></i>
-            </a>
-            <a href="wa.me/" target="_blank" class="btn">
-                <p>linkedIn</p>
-                <i class="fa-regular fa-envelope"></i>
-            </a>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/aliou77">
-                    <i class="fa-brands fa-github"></i>
-                </a>
+    <section class="contact shadow-blue" id="contact">
+        <div class="content">
+            <h2 class="heading">Me <span>Contacter !</span></h2>
+            <div class="contact-container">
+                <p class="email text-center">mamadoualioudevelopperweb@gmail.com</p>
+                <div class="links-content flex gap-2">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mamadoualioudevelopperweb@gmail.com" target="_blank" class="link-contact">
+                        <p>Email</p>
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://wa.me/+245956676737" target="_blank" class="link-contact">
+                        <p>WhatsApp</p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mamadou-aliou-diallo-ab9b93298/" target="_blank" class="link-contact">
+                        <p>linkedIn</p>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" target="_blank" class="link-contact">
+                        <p>Github</p>
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>

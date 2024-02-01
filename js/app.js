@@ -35,6 +35,7 @@ $(document).ready(()=>{
             }
         })
     }
+    
     // console.log(sections, navLinks)
     
     // navbar show hide

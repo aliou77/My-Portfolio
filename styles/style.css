@@ -14,6 +14,7 @@
 html {
   font-size: 62.2%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -77,8 +78,24 @@ a {
   gap: 6rem;
 }
 
+.gap-2 {
+  gap: 2rem;
+}
+
 .capitalize {
   text-transform: capitalize;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mt-7 {
+  margin-top: 7rem;
 }
 
 header.sticky {
@@ -148,6 +165,9 @@ header.sticky {
 /* Home design */
 .cv-content {
   margin-top: 30px;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .text-animate {
@@ -160,6 +180,14 @@ header.sticky {
 
 .shadow-header {
   background-color: rgba(0, 0, 0, 0.8901960784);
+}
+
+.shadow-black {
+  background: rgba(0, 0, 0, 0.9411764706) !important;
+}
+
+.shadow-blue {
+  background: linear-gradient(to top, var(--bg-color), rgba(0, 0, 0, 0.8705882353)) !important;
 }
 
 section {
@@ -178,6 +206,8 @@ section h1 {
   line-height: 1.3;
 }
 section h2.heading {
+  font-family: "Playfair Display";
+  font-weight: 700;
   text-align: center;
   font-size: 4rem;
   padding: 4rem;
@@ -190,13 +220,15 @@ section p {
 }
 section span {
   color: var(--main-color);
+  font-family: "Playfair Display";
+  font-weight: 700;
 }
 section .btn {
   font-family: "Playfair Display";
   font-size: 18px;
   display: inline-block;
   padding: 2rem 5rem;
-  border-radius: 4rem;
+  border-radius: 2rem;
   background-color: var(--main-color);
   color: var(--text-color);
   font-weight: 600;
@@ -258,7 +290,6 @@ section.about .about-content p {
 
 section.services {
   display: block;
-  background-color: var(--bg-color);
 }
 section.services .services-container {
   display: flex;
@@ -291,6 +322,8 @@ section.services .services-container .service-box h3 {
   font-size: 24px;
   margin-top: 10px;
   font-family: "Playfair Display";
+  font-weight: 700;
+  text-align: center;
 }
 section.services .services-container .service-box p {
   margin: 15px 0;
@@ -350,39 +383,56 @@ section.projects .project-layer {
   transition: all 0.4s;
 }
 
+.link-contact {
+  font-weight: 500;
+  color: white;
+  padding: 30px 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  transition: all 0.4s;
+}
+.link-contact p {
+  font-family: "Playball";
+}
+.link-contact p, .link-contact i {
+  font-size: 3rem;
+}
+
+.link-contact:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
 section.contact {
   display: block;
-  background-color: var(--bg-color);
 }
 section.contact h2 {
+  font-family: "Playfair Display";
   text-align: center;
   font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 4rem;
-}
-section.contact .contact-container {
-  margin-top: 18rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 section.contact .contact-container a {
   font-size: 18px;
   display: flex;
   align-items: center;
-}
-section.contact .contact-container a:hover > i {
-  transform: scale(1.2);
+  gap: 1rem;
 }
 section.contact .contact-container .email {
   margin: 20px 0;
 }
-section.contact .contact-container p, section.contact .contact-container i {
-  font-size: 19px;
-  transition: all 0.4s ease;
-}
-section.contact .contact-container p {
-  margin-right: 10px;
+section.contact .links-content {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Design footer */
@@ -392,7 +442,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: var(--bg-color);
 }
 footer a {
   font-size: 18px;
@@ -410,9 +460,6 @@ footer a:hover {
   box-shadow: 0 0 1.5rem var(--main-color);
 }
 
-.footer-content {
-  width: 80%;
-}
 .footer-content p {
   font-size: 17px;
   text-align: center;
@@ -456,10 +503,11 @@ footer a:hover {
     text-align: start;
   }
   #header .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    width: 30%;
+    z-index: 100;
+    width: 40%;
     height: 100vh;
     padding: 1rem 3%;
     background-color: var(--bg-color);
@@ -474,20 +522,28 @@ footer a:hover {
   #header #xmark {
     display: block;
   }
-  section.home {
-    flex-direction: column-reverse;
-    padding-top: 10rem;
+  section .content {
+    padding: 0;
   }
-  section.home .home-img img {
+  section.home .content {
+    flex-direction: column-reverse;
+  }
+  section.home .content h1 {
+    font-size: 60px;
+  }
+  section.services .services-container, section.projects .projects-container {
+    gap: 4rem;
+  }
+  .home-img img {
     width: 50vw;
   }
   section h2.heading {
-    margin: 8rem;
+    margin: 10px 0;
   }
-  section.about {
+  section.about .content {
     flex-direction: column;
   }
-  section.about .about-img img {
+  .about-img img {
     width: 50vw;
   }
   section.projects .projects-container {
@@ -496,8 +552,16 @@ footer a:hover {
   section.projects .project-img {
     margin: 0 auto;
   }
-  section.projects .project-box .project-layer {
-    transform: translateY(0);
+  .link-contact {
+    width: 100%;
+    padding: 20px 40px;
+    justify-content: space-between;
+  }
+  section.contact .links-content {
+    gap: 4rem;
+  }
+  footer {
+    margin-top: -5px;
   }
 }
 @media screen and (max-width: 550px) {
@@ -508,13 +572,13 @@ footer a:hover {
     padding: 10px;
   }
   section.home .home-img img {
-    width: 90vw;
+    width: 100%;
   }
   section.about .about-img {
     padding: 10px;
   }
   section.about .about-img img {
-    width: 90vw;
+    width: 100%;
   }
   footer {
     display: flex;
