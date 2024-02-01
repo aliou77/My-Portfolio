@@ -3,38 +3,36 @@ $(document).ready(()=>{
     const sections = $("section"),
           navLinks = $("nav a");
 
-    function scrollSection(){
-        $(window).on('scroll', ()=>{
-            sections.each((i, sec)=>{
-                let top = window.scrollY
-                let offset = sec.offsetTop - 200
-                let height = sec.offsetHeight
-                let id = $(sec).attr('id')
-    
-                if(top >= offset && top < offset + height){
-                    navLinks.each((i, link)=>{
-                        $(link).removeClass('active')
-                        $('nav a[href="#'+ id +'"]').addClass('active')
-                    })
-                    // console.log("top: "+top, "offset: "+offset, "height: "+height)
-                }
-    
-                
-            })
-            // navbar sticky
-    
-            if(window.scrollY > 100){
-                $('header').addClass('sticky')
-            }else{
-                $('header').removeClass('sticky')
+    $(window).on('scroll', ()=>{
+        sections.each((i, sec)=>{
+            let top = window.scrollY
+            let offset = sec.offsetTop - 200
+            let height = sec.offsetHeight
+            let id = $(sec).attr('id')
+
+            if(top >= offset && top < offset + height){
+                navLinks.each((i, link)=>{
+                    $(link).removeClass('active')
+                    $('nav a[href="#'+ id +'"]').addClass('active')
+                })
+                // console.log("top: "+top, "offset: "+offset, "height: "+height)
             }
-    
-            // remove active when user click on link (scroll event)
-            if($('nav.navbar').hasClass('active')){
-                $('nav.navbar').removeClass('active')
-            }
+
+            
         })
-    }
+        // navbar sticky
+
+        if(window.scrollY > 100){
+            $('header').addClass('sticky')
+        }else{
+            $('header').removeClass('sticky')
+        }
+
+        // remove active when user click on link (scroll event)
+        if($('nav.navbar').hasClass('active')){
+            $('nav.navbar').removeClass('active')
+        }
+    })
     
     // console.log(sections, navLinks)
     

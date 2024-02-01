@@ -103,6 +103,10 @@ header.sticky {
 }
 
 #header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -239,6 +243,9 @@ section .btn:hover {
   box-shadow: 0 0 0.7rem var(--main-color);
 }
 
+section.home {
+  margin-top: 5rem;
+}
 section.home .home-img {
   padding-left: 10rem;
 }
@@ -497,6 +504,7 @@ footer a:hover {
     display: block;
   }
   #header {
+    position: static;
     padding: 2rem 4%;
   }
   #header a {
@@ -524,6 +532,9 @@ footer a:hover {
   }
   section .content {
     padding: 0;
+  }
+  section.home {
+    margin-top: 0;
   }
   section.home .content {
     flex-direction: column-reverse;
