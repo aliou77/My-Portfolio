@@ -3,13 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".,/styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <title>Mes réalisations</title>
 </head>
 <body>
-    
-<!-- Lister toutes les réalisations avec leurs details comme dans une page dedier a chaque projet avec tous les details -->
+
+    <main class="main-realisation">
+        <div class="content-main-realisation">
+            <div class="head-realisation bg-realisation">
+                <div class="head-content shadow-blue h-full flex flex-col gap-3 justify-center items-center p-desktop">
+                    <div class="logo-content flex justify-start shadow-header w-full px-20px bg-transparent">
+                        <a href="/" class="logo font-playball">M.A.D</a>
+                    </div>
+                    <h1 class="title">MES RÉALISATIONS</h1>
+                    <p class="text-2rem font-playfair text-center">Voici un aperçu des projets sur lesquels je suis intervenus.</p>
+                </div>
+            </div>
+            <div class="realisation-container flex flex-col">
+                <div class="reatilisation-item bg-kit">
+                    <div class="content-projet shadow-blue h-full pb-7 p-desktop">
+                        <h2 class="title-projet pt-5">Kitbubble-Tea</h2>
+                        <p class="desc-projet mt-5">Développement du thème Shopify et intégration du site kitbubbletea.com pour <a href="www.linnovlab.com" class="text-main-color">LinnovLab</a></p>
+                        <div id="content-v-plus" class="flex items-center justify-between mt-15">
+                            <h4 class="font-playball font-medium text-3rem">Intégration & Développement Shopify</h4>
+                            <a href="https://kitbubbletea.com/" class="btn-v-plus">Voir le site</a>
+                        </div>
+                        <div class="explain w-full">
+                            <p class="text-normal">L'objectif de la mission était de partir d'une maquette réalisée sur Figma 
+                                et de créer un thème Shopify responsive qui permette à l'administrateur une gestion simple 
+                                et rapide du contenu.</p>
+                        </div>
+                        <div class="flex gap-3 mt-3">
+                            <div class="img w-full">
+                                <img src="../imgs/kit.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                            <div class="img w-img-mobile">
+                                <img src="../imgs/kit mobile.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reatilisation-item bg-chaap">
+                    <div class="content-projet shadow-blue h-full pb-7 p-desktop">
+                        <h2 class="title-projet pt-5">Chaap</h2>
+                        <p class="desc-projet mt-5">Développement Symfony d'une application de chat</p>
+                        <div id="content-v-plus" class="flex items-center justify-between mt-15">
+                            <h4 class="font-playball font-medium text-3rem">Développement avec le Framework Symfony</h4>
+                            <a href="https://github.com/aliou77/Projet-Symfony-Chat-Application" class="btn-v-plus">Voir le projet</a>
+                        </div>
+                        <div class="explain w-full">
+                            <p class="text-normal">Création responsive du thème de l'application avec du HTML, SCSS et Javascript, ensuite intégration du
+                                Thème dans l'application Chap avec le Framework Symfony. J'ai aussi effectué des tests unitaires avec PHPUnit pour vérifier
+                                la performance du code.
+                            </p>
+                        </div>
+                        <div class="flex gap-3 mt-3">
+                            <div class="img w-full">
+                                <img src="../imgs/chaap.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                            <div class="img w-img-mobile">
+                                <img src="../imgs/bahwai mobile.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reatilisation-item bg-peintre">
+                    <div class="content-projet shadow-blue h-full pb-7 p-desktop">
+                        <h2 class="title-projet pt-5">Art-Peintre</h2>
+                        <p class="desc-projet mt-5">Développement Symfony d'un site pour peintre</p>
+                        <div id="content-v-plus" class="flex items-center justify-between mt-15">
+                            <h4 class="font-playball font-medium text-3rem">Développement avec le Framework Symfony</h4>
+                            <a href="https://github.com/aliou77/Projet-symfony-peintre" class="btn-v-plus">Voir le projet</a>
+                        </div>
+                        <div class="explain w-full">
+                            <p class="text-normal">Création responsive du thème de l'application avec du HTML, SCSS et Javascript, ensuite intégration du
+                                Thème dans l'application Chap avec le Framework Symfony. J'ai aussi effectué des tests unitaires avec PHPUnit pour vérifier
+                                la performance du code.
+                            </p>
+                        </div>
+                        <div class="flex gap-3 mt-3">
+                            <div class="img w-full">
+                                <img src="../imgs/peintre.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                            <div class="img w-img-mobile">
+                                <img src="../imgs/bahwai mobile.png" class="w-full radius-2" alt="Bahwai desktop">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script type="application/javascript" src="js/jquery/jquery.js"></script>
     <script src="js/app.js"></script>
