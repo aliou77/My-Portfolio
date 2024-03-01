@@ -10,7 +10,14 @@
     border: none;
     outline: none;   
 }
-
+*::selection{
+    background-color: var(--main-color);
+    color: white;
+}
+*::-moz-selection{
+    background-color: var(--main-color);
+    color: white;
+}
 // #BD3100 => couleur text
 // #0B162C => bg color
 
@@ -22,6 +29,7 @@ html{
 body{
     color: var(--text-color);
 }
+
 .bg-index{
     background: url('../imgs/bg/file-connexion.jpg') no-repeat center;
     background-size: cover;
@@ -576,6 +584,12 @@ section.contact{
 }
 .bg-transparent{
     background-color: transparent;
+}
+.bg-bahwai{
+    background: url('../imgs/bahwai.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .bg-kit{
     background: url('../imgs/kit.png');

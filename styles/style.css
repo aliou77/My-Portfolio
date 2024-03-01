@@ -11,6 +11,16 @@
   outline: none;
 }
 
+*::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+*::-moz-selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
 html {
   font-size: 62.2%;
   overflow-x: hidden;
@@ -606,6 +616,13 @@ section.contact .links-content {
 
 .bg-transparent {
   background-color: transparent;
+}
+
+.bg-bahwai {
+  background: url("../imgs/bahwai.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .bg-kit {
