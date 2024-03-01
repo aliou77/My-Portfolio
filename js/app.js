@@ -55,7 +55,7 @@ $(document).ready(()=>{
 
     ScrollReveal().reveal('.home-content, .about-content h2, .about-img, .heading', { origin: 'top' });
     ScrollReveal().reveal(' .home-content h1, .contact-container .email, h2.heading, .faq-container', { origin: 'left' });
-    ScrollReveal().reveal('.home-content p, .about-content p, faq-item', { origin: 'right' });
+    ScrollReveal().reveal('.home-content p, .about-content p, .btn', { origin: 'right' });
     ScrollReveal().reveal('.home-img img, .about-img, .projects-container .project-box, .contact-container a, .services-container', 
         { origin: 'bottom' }
     );
